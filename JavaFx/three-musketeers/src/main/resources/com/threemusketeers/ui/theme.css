@@ -1,0 +1,90 @@
+.root-pane {
+    -fx-background-color: #2b2f36;
+}
+
+.top-bar {
+    -fx-background-color: #1f2228;
+}
+
+.status-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #eceff1;
+}
+
+.board {
+    -fx-background-color: #1f2228;
+    -fx-padding: 4;
+    -fx-hgap: 2;
+    -fx-vgap: 2;
+}
+
+.cell-background {
+    -fx-stroke: rgba(0, 0, 0, 0.25);
+    -fx-stroke-width: 1;
+}
+
+.cell-light {
+    -fx-fill: #d7ccc0;
+}
+
+.cell-dark {
+    -fx-fill: #a1887f;
+}
+
+.cell.selected .cell-background {
+    -fx-stroke: #ffca28;
+    -fx-stroke-width: 4;
+}
+
+.cell.legal-destination .cell-background {
+    -fx-fill: #aed581;
+    -fx-stroke: #558b2f;
+    -fx-stroke-width: 3;
+}
+
+.cell.hover .cell-background {
+    -fx-stroke: #90a4ae;
+    -fx-stroke-width: 2;
+}
+
+.piece-token {
+    -fx-stroke-width: 2.5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0.3, 0, 1);
+}
+
+.musketeer-token {
+    -fx-fill: #1b1b1f;
+    -fx-stroke: #c9a86a;
+}
+
+.enemy-token {
+    -fx-fill: #f5f2ea;
+    -fx-stroke: #4a4a4a;
+}
+
+.piece-icon {
+    -fx-font-size: 26px;
+}
+
+.new-game-dialog {
+    -fx-background-color: #2b2f36;
+}
+
+.new-game-dialog .radio-button,
+.new-game-dialog .label {
+    -fx-text-fill: #eceff1;
+}
+
+.new-game-dialog .button,
+.top-bar .button {
+    -fx-background-color: #3d4451;
+    -fx-text-fill: #eceff1;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14;
+}
+
+.new-game-dialog .button:hover,
+.top-bar .button:hover {
+    -fx-background-color: #4b5362;
+}

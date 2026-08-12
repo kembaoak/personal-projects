@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Read Aloud - Text to Speech",
+  "version": "0.1.0",
+  "description": "Reads selected text or full pages aloud using your browser's built-in voices.",
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus", "offscreen"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text to Speech</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Text to Speech</h1>
+
+    <div class="input-row">
+      <textarea id="text-input" placeholder="Paste text here, or upload a .txt / .pdf file below..."></textarea>
+    </div>
+
+    <div class="input-row">
+      <label for="file-input" class="file-label">Upload .txt or .pdf</label>
+      <input type="file" id="file-input" accept=".txt,.pdf" />
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="voice-select">Voice</label>
+        <select id="voice-select"></select>
+      </div>
+
+      <div class="control-group">
+        <label for="rate">Speed: <span id="rate-value">1</span>x</label>
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1" />
+      </div>
+
+      <div class="control-group">
+        <label for="pitch">Pitch: <span id="pitch-value">1</span></label>
+        <input type="range" id="pitch" min="0" max="2" step="0.1" value="1" />
+      </div>
+    </div>
+
+    <div class="playback-row">
+      <button id="skip-prev" disabled>&#9664;&#9664;</button>
+      <button id="play-pause">Play</button>
+      <button id="skip-next" disabled>&#9654;&#9654;</button>
+      <button id="stop" disabled>Stop</button>
+    </div>
+
+    <p id="status" class="status"></p>
+    <p id="now-reading" class="now-reading"></p>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

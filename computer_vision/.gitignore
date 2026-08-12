@@ -1,0 +1,6 @@
+venv/
+dataset/
+trainer/
+labels.txt
+__pycache__/
+*.pyc
